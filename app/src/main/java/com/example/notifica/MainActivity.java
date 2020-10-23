@@ -11,6 +11,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.media.RingtoneManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         notification
                 .setSmallIcon(R.mipmap.ic_launcher) // can use any other icon
                 .setContentTitle("TEST NOTIFICATION")
-                .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
+                .setDefaults(Notification.DEFAULT_SOUND)
                 .setContentText("NOTIFICATION CONTENT")
                 .setNumber(3); // this shows a number in the notification dots
 
