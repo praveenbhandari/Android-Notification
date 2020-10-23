@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 
@@ -61,8 +62,10 @@ public class MainActivity extends AppCompatActivity {
         notification
                 .setSmallIcon(R.mipmap.ic_launcher) // can use any other icon
                 .setContentTitle("TEST NOTIFICATION")
+                .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
                 .setContentText("NOTIFICATION CONTENT")
                 .setNumber(3); // this shows a number in the notification dots
+
 
         NotificationManager notificationManager =
                 (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
